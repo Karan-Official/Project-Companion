@@ -1,0 +1,14 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(33,33,33);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }

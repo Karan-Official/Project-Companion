@@ -1,0 +1,309 @@
+#Chat_Area {
+    padding: 30px 0px;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    transition: all 0.2s ease;  
+}
+
+#Greeting:hover {
+    transform: scale(0.96);
+}
+
+#Greeting:before,
+#Greeting:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+    opacity: 0; /* Hide initially */
+    transition: opacity 0.2s ease; /* Smooth fade effect */
+}
+
+#Greeting:hover:before,
+#Greeting:hover:after {
+    opacity: 1; /* Show on hover */
+}
+
+#Greeting:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #FF5733 20%, transparent 20%),
+      radial-gradient(circle, #33FF57 20%, transparent 20%),
+      radial-gradient(circle, #3357FF 20%, transparent 20%),
+      radial-gradient(circle, #F1C40F 20%, transparent 20%),
+      radial-gradient(circle, #8E44AD 20%, transparent 20%),
+      radial-gradient(circle, #E67E22 20%, transparent 20%),
+      radial-gradient(circle, #1ABC9C 20%, transparent 20%),
+      radial-gradient(circle, #3498DB 20%, transparent 20%),
+      radial-gradient(circle, #9B59B6 20%, transparent 20%);
+    background-size: 15% 15%, 10% 10%, 12% 12%, 8% 8%, 20% 20%, 18% 18%, 14% 14%, 16% 16%, 10% 10%;
+    background-position: 50% 120%, 20% 130%, 70% 90%, 40% 140%, 60% 110%, 10% 130%, 80% 100%, 30% 150%, 90% 90%;
+    animation: greentopBubbles 1s ease forwards; /* Ensure animation retains final state */
+}
+
+@keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+#Greeting:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #FF5733 20%, transparent 20%),
+      radial-gradient(circle, #33FF57 20%, transparent 20%),
+      radial-gradient(circle, #3357FF 20%, transparent 20%),
+      radial-gradient(circle, #F1C40F 20%, transparent 20%),
+      radial-gradient(circle, #8E44AD 20%, transparent 20%),
+      radial-gradient(circle, #E67E22 20%, transparent 20%),
+      radial-gradient(circle, #1ABC9C 20%, transparent 20%);
+    background-size: 15% 15%, 10% 10%, 12% 12%, 8% 8%, 20% 20%, 18% 18%, 14% 14%;
+    background-position: 50% 0%, 20% 10%, 70% -10%, 40% 0%, 60% -20%, 10% 5%, 80% 0%;
+    animation: greenbottomBubbles 1s ease forwards; /* Ensure animation retains final state */
+}
+
+@keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+#Greet {
+    font-size: xx-large;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    text-wrap: nowrap;
+    margin: 0px;
+}
+
+.Greeting_Image {
+  height: 80%;
+  margin: 0px 30px;
+  transition: transform 0.2s ease;
+}
+
+#Greeting:hover .Greeting_Image {
+  transform: scale(1.5);
+}
+
+#Mood {
+  padding: 0px 20px;
+  margin: 50px 0px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.Chat_Area_Text {
+  font-size: larger;
+  margin: 0px 10px;
+}
+
+#Mood_Image {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.Mood_Analysis_Image {
+  height: 60%;
+  margin: 0px 5px;
+  transition: filter 0.3s ease;
+}
+
+.Grayscale {
+  filter: grayscale(100%);
+}
+
+#MoodLevel_Text {
+  margin: 0px 20px;
+}
+
+#Chat {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#Chat_Prompt {
+  margin: 0px 10px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+#Prompt_Input {
+  width: 90%;
+  max-height: 100px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  resize: none;
+  overflow-y: auto;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  color: white;
+}
+
+#Prompt_Input:focus {
+  border: none;
+  outline: none;
+}
+
+#Prompt_Button_Box {
+  width: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Prompt_Button {
+  height: 50px;
+  width: 50px;
+  margin: 0px 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, rgb(83, 68, 155), rgb(83 62 201), rgb(81, 59, 208));
+  color: white;
+}
+
+#Prompt_Button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px gray;
+}
+
+#Output {
+  background-color: white;
+  margin: 10px 10px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.AI_Answer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.AI_Prompt {
+  align-self: flex-start;
+  display: flex;
+  align-items: start;
+  margin: 10px 0px;
+}
+
+.AI_Response {
+  align-self: flex-end;
+  display: flex;
+  align-items: start;
+  margin: 10px 0px;
+}
+
+.User_Logo_Prompt {
+  height: 25px;
+  margin: 0px 10px 0px 0px;
+}
+
+.User_Question {
+  margin: 0px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;   
+  word-break: break-word; 
+  white-space: normal;
+}
+
+.App_Logo_Response {
+  height: 25px;
+  margin: 0px 0px 0px 10px;
+}
+
+.AI_Response_Text {
+  margin: 0px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;   
+  word-break: break-word; 
+  white-space: normal;
+}
+
+.Loading_Message {
+  display: flex;                 /* Enable flexbox */
+  justify-content: center;       /* Center horizontally */
+  align-items: center;           /* Center vertically */
+  margin: 20px 0;               /* Space around loading message */
+}
+
+@media (max-width: 620px) {
+  .Greeting_Image {
+    margin: 0px 15px;
+  }
+
+  #Mood {
+    flex-direction: column;
+  }
+
+  @media (max-width: 380px) {
+    #Greet {
+      font-size: x-large;
+    }
+    
+    .Greeting_Image {
+      height: 60%;
+    }
+
+    .Chat_Area_Text {
+      font-size: large;
+    }
+
+    .Mood_Analysis_Image {
+      height: 50%;
+    }
+  }
+}

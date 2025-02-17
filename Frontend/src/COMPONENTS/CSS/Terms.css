@@ -1,0 +1,27 @@
+#Terms_Box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 15px;
+}
+
+#Terms_Heading {
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0px 0px 30px 0px;
+}
+
+#All_Terms {
+    display: flex;
+    flex-direction: column;
+}
+
+.Terms_Head {
+    font-size: x-large;
+    font-weight: 600;
+    padding: 30px 0px 10px 0px;
+}
+
+.Terms_Para {
+    font-size: larger;
+}
