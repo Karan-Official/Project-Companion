@@ -43,7 +43,7 @@ function SignUp() {
         }
 
         try {
-            const response = await axios.post("http://localhost:5000/Auth/VerifyOTP", OTPInfo);
+            const response = await axios.post("https://project-companion-backend.onrender.com/Auth/VerifyOTP", OTPInfo);
 
             if(!response.data.success) {
                 alert(response.data.message);
@@ -61,7 +61,7 @@ function SignUp() {
         }
 
         try {
-            const response = await axios.post("http://localhost:5000/Auth/SignUp", UserInfo);
+            const response = await axios.post("https://project-companion-backend.onrender.com/Auth/SignUp", UserInfo);
 
             if(response.data.success && response.data.new === "No") {
                 alert("Email already exists, please login");

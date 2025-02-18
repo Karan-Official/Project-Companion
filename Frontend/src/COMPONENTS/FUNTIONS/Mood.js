@@ -8,7 +8,7 @@ async function fetchMood() {
             return 5;
         }
 
-        const response = await axios.post("http://localhost:5000/Mood/FetchMoodValue", {email});
+        const response = await axios.post("https://project-companion-backend.onrender.com/Mood/FetchMoodValue", {email});
 
         if(response.data.success && response.data.MoodData !== null) {
             return response.data.MoodData;

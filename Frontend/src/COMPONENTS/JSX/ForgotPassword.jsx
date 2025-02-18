@@ -31,7 +31,7 @@ function ForgotPassword() {
         }
 
         try {
-            const response = await axios.post("http://localhost:5000/Auth/VerifyOTP", OTPInfo);
+            const response = await axios.post("https://project-companion-backend.onrender.com/Auth/VerifyOTP", OTPInfo);
 
             if(!response.data.success) {
                 alert(response.data.message);
@@ -48,7 +48,7 @@ function ForgotPassword() {
         }
 
         try  {
-            const response = await axios.post("http://localhost:5000/Auth/UpdatePassword", NewInfo);
+            const response = await axios.post("https://project-companion-backend.onrender.com/Auth/UpdatePassword", NewInfo);
 
             if(response.data.success) {
                 alert(response.data.message);

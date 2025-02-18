@@ -28,7 +28,7 @@ function Login() {
         };
 
         try {
-            const response = await axios.post("http://localhost:5000/Auth/Login", UserInfo);
+            const response = await axios.post("https://project-companion-backend.onrender.com/Auth/Login", UserInfo);
             if(response.data.success) {
                 localStorage.setItem("username", response.data.username);
                 localStorage.setItem("email", response.data.email);

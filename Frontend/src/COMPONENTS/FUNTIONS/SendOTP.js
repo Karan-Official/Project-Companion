@@ -9,7 +9,7 @@ export async function SendOtp() {
     }
 
     try {
-        const response = await axios.post("http://localhost:5000/Auth/OTP", {email});
+        const response = await axios.post("https://project-companion-backend.onrender.com/Auth/OTP", {email});
         if(response.data.success) {
             alert("OTP sent to your Email ID");
             document.getElementById("Email_Input").disabled = true;

@@ -60,7 +60,7 @@ function Chat() {
         try {
             document.getElementById("Prompt_Input").value = "";
             setIsLoading(true);
-            const response = await axios.post("http://localhost:5000/Chat/SaveChat", Data);
+            const response = await axios.post("https://project-companion-backend.onrender.com/Chat/SaveChat", Data);
             setIsLoading(false);
             if(response.data.success === true) {
                 const newMessage = {
@@ -87,7 +87,7 @@ function Chat() {
         };
 
         try {
-            const response = await axios.post("http://localhost:5000/Chat/GetChat", requestData);
+            const response = await axios.post("https://project-companion-backend.onrender.com/Chat/GetChat", requestData);
             if (response.data.success) {
                 const messages = response.data.chat.messages.map((message) => ({
                     userPrompt: message.question,
