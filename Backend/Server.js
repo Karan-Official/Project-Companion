@@ -10,7 +10,7 @@ const MoodRoute = require("./Routes/MoodRoute");
 app.use(cors());
 
 app.use(cors({
-    origin: "https://comapnion.onrender.com/",
+    origin: "https://comapnion.onrender.com",
     methods: "GET, POST, PUT, DELETE, OPTIONS",
     allowedHeaders: "Content-Type, Authorization",
     credentials: true  
